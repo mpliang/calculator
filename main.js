@@ -2,8 +2,8 @@ var displaySum = 0;
 var displayNum = "";
 var sum = 0;
 var currentValue;
-var isOperating = false;
-var toBeCleared = false;
+var go = false;
+var clear = false;
 
 $(document).ready(init);
 
@@ -17,9 +17,9 @@ function init() {
 }
 
 function buttonClicked(event) {
-	if ($('#display').text() === '0' || toBeCleared) {
+	if ($('#display').text() === '0' || clear) {
 		$('#display').text($(this).data('id'));
-		toBeCleared = false;
+		clear = false;
 	} else {
 		$('#display').text($('#display').text().concat($(this).data('id')));
 	}
@@ -28,7 +28,7 @@ function buttonClicked(event) {
 function operatorClicked(event) {
 	console.log($(this).data('id'));
 
-	if (isOperating) {
+	if (go) {
       $('#display').text(evaluate());
     }
 
@@ -50,8 +50,8 @@ function operatorClicked(event) {
 	currentValue = $('#display').text();
 	// console.log(displayNum);
 	// console.log(currentValue);
-	isOperating = true;
-	toBeCleared = true;
+	go = true;
+	clear = true;
 
 }
 function otherClicked(event) {
@@ -86,7 +86,7 @@ function reset() {
 		console.log('reset');
 		displayNum = 0;
 		displaySum = 0;
-		toBeCleared = true;
-  		isOperating = false;
+		clear = true;
+  		go = false;
 		$('#display').text(displaySum);
 }
