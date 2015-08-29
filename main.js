@@ -8,7 +8,7 @@ var clear = false;
 $(document).ready(init);
 
 function init() {
-    $('#display').text(displaySum);
+	$('#display').text(displaySum);
 	$('.number').on('click', buttonClicked);
 	$('.operator').on('click', operatorClicked);
 	$('.other').on('click', otherClicked);
@@ -65,16 +65,20 @@ function otherClicked(event) {
 		break;
 		case 'percent': $('#display').text(+$('#display').text() * (1/100));
 		break;
+		case 'dec': $('#display').text($('#display').text() + '.');
+		break;
 		default: console.log('nope');
 	}
 }
 
 function evaluate() { 
   var newValue = parseFloat($('#display').text());
+  console.log(newValue);
+
   var result;
   switch (sign) {
     case '+': result = +currentValue + +newValue; break;
-    case '−': result = currentValue - newValue; break;
+    case '-': result = currentValue - newValue; break;
     case '*': result = currentValue * newValue; break;
     case '/': result = currentValue / newValue; break;
     default: result = newVal;

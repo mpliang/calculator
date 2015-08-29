@@ -21,6 +21,21 @@ table {
   vertical-align: bottom;
 }
 
+.dec {
+  width: 70px;
+  height: 70px;
+  background-color: #eeeeee;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#dec {
+  width: 70px;
+  height: 70px;
+  background-color: #eeeeee;
+  border: 1px solid black;
+  cursor: pointer;
+}
 .number {
 	width: 70px;
 	height: 70px;
