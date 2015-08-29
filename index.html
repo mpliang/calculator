@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="container">
+
+		<h3>Go here:</h3>
+		<a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=google%20calculator">Click this!</a>
+		<table>
+			<tr>
+				<td colspan='4' id="display">0</td>
+			</tr>
+			<tr>
+				<td class='other' data-id='clear'>AC</td>
+				<td class='other' data-id='neg'>&#177;</td>
+				<td class='other' data-id='percent'>%</td>
+				<td class='operator' data-id='div' type='text'>&#247;</td>
+			</tr>
+			<tr>
+				<td class='number' data-id='7'>7</td>
+				<td class='number' data-id='8'>8</td>
+				<td class='number' data-id='9'>9</td>
+				<td class='operator' data-id='mult'>&times;</td>
+			</tr>
+			<tr>
+				<td class='number' data-id='4'>4</td>
+				<td class='number' data-id='5'>5</td>
+				<td class='number' data-id='6'>6</td>
+				<td class='operator' data-id='sub'>-</td>
+			</tr>
+			<tr>
+				<td class='number' data-id='1'>1</td>
+				<td class='number' data-id='2'>2</td>
+				<td class='number' data-id=3>3</td>
+				<td class='operator' data-id='add'>+</td>
+			</tr>
+			<tr>
+				<td class='number' colspan='2' data-id='0'>0</td>
+				<td id='number' data-id='dec'>.</td>
+				
+				<td class='operator' id='equals'>=</td>
+			</tr>
+		</table>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
