@@ -70,13 +70,13 @@ function otherClicked(event) {
 }
 
 function evaluate() { 
-  var newVal = parseFloat($('#display').text());
+  var newValue = parseFloat($('#display').text());
   var result;
   switch (sign) {
-    case '+': result = +currentValue + +newVal; break;
-    case '−': result = currentValue - newVal; break;
-    case '*': result = currentValue * newVal; break;
-    case '/': result = currentValue / newVal; break;
+    case '+': result = +currentValue + +newValue; break;
+    case '−': result = currentValue - newValue; break;
+    case '*': result = currentValue * newValue; break;
+    case '/': result = currentValue / newValue; break;
     default: result = newVal;
   }
   return result;
