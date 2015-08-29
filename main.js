@@ -44,10 +44,12 @@ function operatorClicked(event) {
 		case 'equals': 
 		$('#display').text(evaluate());
    		reset();
+   		break;
 		default: console.log('fuck');
 	}
 	currentValue = $('#display').text();
-	console.log(currentValue);
+	// console.log(displayNum);
+	// console.log(currentValue);
 	isOperating = true;
 	toBeCleared = true;
 
@@ -58,6 +60,10 @@ function otherClicked(event) {
 
 	switch (operator) {
 		case 'clear': reset();
+		break;
+		case '+/-': $('#display').text('-' + $('#display').text());
+		break;
+		case 'percent': $('#display').text(+$('#display').text() * (1/100));
 		break;
 		default: console.log('nope');
 	}
